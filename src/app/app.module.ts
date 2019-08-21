@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { CommonModule } from "@angular/common";
+
 //imports modulos
 import { SharedModule } from './components/shared/shared.module';
 import { PaginasModule } from './components/paginas/paginas.module';
@@ -13,6 +15,7 @@ import { FormRegisterComponent } from './components/login/register/form-register
 import { FormRegisterEmpresaComponent } from './components/login/register/form-register-empresa/form-register-empresa.component';
 import { AppComponent } from './app.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,14 +26,17 @@ import { AppComponent } from './app.component';
     FormRegisterEmpresaComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     SharedModule,
     PaginasModule
+    
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
   providers: [],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
