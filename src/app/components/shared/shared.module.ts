@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from "@angular/common";
+import { RouterModule } from '@angular/router';
+
 
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
@@ -18,6 +20,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
         [ NavbarComponent,  
           SidebarComponent ],
           imports: [
+              RouterModule,
               CommonModule,
               BrowserModule,
               MDBBootstrapModule.forRoot() 
