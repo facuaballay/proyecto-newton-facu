@@ -6,7 +6,10 @@ import { CommonModule } from "@angular/common";
 //imports modulos
 import { SharedModule } from './components/shared/shared.module';
 import { PaginasModule } from './components/paginas/paginas.module';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from './app.routes';
+import { HttpClientModule } from '@angular/common/http';
+
+
 //login componentes
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/login/register/register.component';
@@ -14,6 +17,7 @@ import { FormLoginComponent } from './components/login/form-login/form-login.com
 import { FormRegisterComponent } from './components/login/register/form-register/form-register.component';
 import { FormRegisterEmpresaComponent } from './components/login/register/form-register-empresa/form-register-empresa.component';
 import { AppComponent } from './app.component';
+
 
 
 @NgModule({
@@ -31,7 +35,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
     SharedModule,
-    PaginasModule
+    PaginasModule,
+    HttpClientModule
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
