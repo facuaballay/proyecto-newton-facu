@@ -28,6 +28,7 @@ import { AppComponent } from './app.component';
     FormLoginComponent,
     FormRegisterComponent,
     FormRegisterEmpresaComponent,
+   
   ],
   imports: [
     CommonModule,
