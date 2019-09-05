@@ -4,11 +4,10 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CommonModule } from "@angular/common";
 
 //imports modulos
-import { SharedModule } from './components/shared/shared.module';
 import { PaginasModule } from './components/paginas/paginas.module';
-import { AppRoutingModule } from './app.routes';
-import { HttpClientModule } from '@angular/common/http';
 
+import { HttpClientModule } from '@angular/common/http';
+import { AppRoutingModule } from './app.routes';
 
 //login componentes
 import { LoginComponent } from './components/login/login.component';
@@ -17,6 +16,8 @@ import { FormLoginComponent } from './components/login/form-login/form-login.com
 import { FormRegisterComponent } from './components/login/register/form-register/form-register.component';
 import { FormRegisterEmpresaComponent } from './components/login/register/form-register-empresa/form-register-empresa.component';
 import { AppComponent } from './app.component';
+import { NopageComponent } from './paginas/nopage/nopage.component';
+import { SharedModule } from './components/shared/shared.module';
 
 
 
@@ -28,6 +29,7 @@ import { AppComponent } from './app.component';
     FormLoginComponent,
     FormRegisterComponent,
     FormRegisterEmpresaComponent,
+    NopageComponent,
    
   ],
   imports: [
@@ -35,9 +37,9 @@ import { AppComponent } from './app.component';
     BrowserModule,
     AppRoutingModule,
     MDBBootstrapModule.forRoot(),
-    SharedModule,
     PaginasModule,
-    HttpClientModule
+    HttpClientModule,
+    SharedModule
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],

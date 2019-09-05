@@ -15,7 +15,7 @@ import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path: "home",
+    path: "",
     component: HomeComponent,
     children: [
       { path: "crearencargado", component:CrearEncargadoComponent },
@@ -23,7 +23,7 @@ const routes: Routes = [
       { path: "crearpedido", component: CrearPedidosComponent },
       { path: "historialpedidos", component: HistorialPedidosComponent },
       { path: "mispedidos", component:MisPedidosComponent },
-      { path: "", redirectTo: "/home", pathMatch: "full" },
+      { path: "", redirectTo: "/mispedidos", pathMatch: "full" },
     ],
   },
  

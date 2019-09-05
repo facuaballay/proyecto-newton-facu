@@ -28,8 +28,8 @@ import { SharedModule } from '../shared/shared.module';
     imports: [
         CommonModule,
         MDBBootstrapModule.forRoot(),
+        PAGES_ROUTES,
         SharedModule,
-        PAGES_ROUTES
          ],
     providers: [],
     exports:[
