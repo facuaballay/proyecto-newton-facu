@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CommonModule } from "@angular/common";
+import { FormsModule } from '@angular/forms';
 
 //imports modulos
 import { PaginasModule } from './components/paginas/paginas.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routes';
+import { SharedModule } from './components/shared/shared.module';
 
 //login componentes
 import { LoginComponent } from './components/login/login.component';
@@ -16,8 +18,6 @@ import { FormLoginComponent } from './components/login/form-login/form-login.com
 import { FormRegisterComponent } from './components/login/register/form-register/form-register.component';
 import { FormRegisterEmpresaComponent } from './components/login/register/form-register-empresa/form-register-empresa.component';
 import { AppComponent } from './app.component';
-import { NopageComponent } from './paginas/nopage/nopage.component';
-import { SharedModule } from './components/shared/shared.module';
 
 
 
@@ -29,8 +29,7 @@ import { SharedModule } from './components/shared/shared.module';
     FormLoginComponent,
     FormRegisterComponent,
     FormRegisterEmpresaComponent,
-    NopageComponent,
-   
+    
   ],
   imports: [
     CommonModule,
@@ -39,7 +38,8 @@ import { SharedModule } from './components/shared/shared.module';
     MDBBootstrapModule.forRoot(),
     PaginasModule,
     HttpClientModule,
-    SharedModule
+    SharedModule,
+    FormsModule
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
