@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { CommonModule } from "@angular/common";
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //imports modulos
 import { PaginasModule } from './components/paginas/paginas.module';
@@ -18,6 +18,7 @@ import { FormLoginComponent } from './components/login/form-login/form-login.com
 import { FormRegisterComponent } from './components/login/register/form-register/form-register.component';
 import { FormRegisterEmpresaComponent } from './components/login/register/form-register-empresa/form-register-empresa.component';
 import { AppComponent } from './app.component';
+import { OlvidepassComponent } from './components/login/olvidepass/olvidepass.component';
 
 
 
@@ -29,6 +30,7 @@ import { AppComponent } from './app.component';
     FormLoginComponent,
     FormRegisterComponent,
     FormRegisterEmpresaComponent,
+    OlvidepassComponent,
     
   ],
   imports: [
@@ -39,7 +41,8 @@ import { AppComponent } from './app.component';
     PaginasModule,
     HttpClientModule,
     SharedModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],

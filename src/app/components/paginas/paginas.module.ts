@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { PAGES_ROUTES } from './paginas.routes';
 //modulos
 import { SharedModule } from '../shared/shared.module';
+import { NavegacionComponent } from './navegacion/navegacion.component';
 
 @NgModule({
     declarations:[ 
@@ -21,7 +22,8 @@ import { SharedModule } from '../shared/shared.module';
         HistorialPedidosComponent,
         ListaEncargadosComponent,
         MisPedidosComponent,
-        HomeComponent
+        HomeComponent,
+        NavegacionComponent
 
 
      ],

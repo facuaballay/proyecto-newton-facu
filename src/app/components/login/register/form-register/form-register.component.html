@@ -1,29 +1,30 @@
 <div class="form-group">
         <div class="col-xs-12">
-            <input class="form-control" type="text" required="" placeholder="Usuario" id="usuario">
+            <input class="form-control" formControlName="usuario" type="text" required="" placeholder="Usuario" id="usuario">
         </div>
     </div>
     <div class="form-group ">
         <div class="col-xs-12">
-            <input class="form-control" type="text" required="" placeholder="Correo" id="correo">
+            <input class="form-control" formControlName="email" type="email" required="" placeholder="Correo" id="correo">
         </div>
     </div>
     <div class="form-group ">
         <div class="col-xs-12">
-            <input class="form-control" type="password" required="" placeholder="Contraseña" id="password">
+            <input class="form-control" formControlName="password1" type="password" required="" placeholder="Contraseña" id="password">
         </div>
     </div>
     <div class="form-group">
         <div class="col-xs-12">
-            <input class="form-control" type="password" required="" placeholder="Confirmar Contraseña">
+            <input class="form-control" formControlName="password2" type="password" required="" placeholder="Confirmar Contraseña">
         </div>
     </div>
     <div class="form-group row">
         <div class="col-md-12">
-            <div class="checkbox checkbox-success p-t-0">
-                <input id="checkbox-signup" type="checkbox"  class="filled-in chk-col-light-blue">
-                <label for="checkbox-signup">Acepta los Terminos</label>
-            </div>
+           
+                    <mdb-checkbox class="checkbox-teal" [checked]="false">Acepta los Terminos</mdb-checkbox>
+
+               
+           
         </div>
     </div>
   <!--boton-->
@@ -39,9 +40,9 @@ mdbWavesEffect
 Registrarse
 </button>
 </div>
-
+<!-- 
 //usuario
 usuario -> string ->unico
 email -> string
 img -> archivo
-password -> password encriptada, como llega se guarda
+password -> password encriptada, como llega se guarda -->

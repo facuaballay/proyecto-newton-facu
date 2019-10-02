@@ -13,58 +13,37 @@
             <!--tabs-->
             <ul class="nav nav-tabs customtab" role="tablist">
               
-              <li class="nav-item "> <a class="nav-link active" data-toggle="tab" href="#usuario" role="tab"><i class="ti-user"></i> Usuario</a> </li>
-               <li class="nav-item "> <a class="nav-link" data-toggle="tab" href="#empresa" role="tab"><i class="ti-home"></i> Empresa</a> </li>
-             
+              <li class="nav-item "> <a class="nav-link active" data-toggle="tab" href="#usuario" role="tab"> Usuario</a> </li>
+               <li class="nav-item "> <a class="nav-link" data-toggle="tab" href="#empresa" role="tab"> Empresa</a> </li>
+               <li class="nav-item "> <a class="nav-link" data-toggle="tab" href="#encargado" role="tab"> Encargado</a> </li>
                    </ul>
               <div class="tab-content ">
                     <div class="tab-pane active " id="usuario" role="tabpanel">
                       
-                    <app-form-login></app-form-login>
+                    <app-form-login ></app-form-login>
                     </div>
                     <div class="tab-pane " id="empresa" role="tabpanel">
                       <app-form-login></app-form-login>
                       <h1>empresa</h1>
                     </div>
-                   
+                    <div class="tab-pane " id="encargado" role="tabpanel">
+                      <app-form-login></app-form-login>
+                      <h1>enacargado</h1>
+                    </div>
                     
                 </div>
-          <!--Formulario-->
           
-          <!--logeo redes testeo-->
-          <!-- <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
-              <div class="social">
-                <a
-                  href="javascript:void(0)"
-                  class="btn  btn-facebook"
-                  data-toggle="tooltip"
-                  title="Login with Facebook"
-                >
-                  <i aria-hidden="true" class="fa fa-facebook"></i>
-                </a>
-                <a
-                  href="javascript:void(0)"
-                  class="btn btn-googleplus"
-                  data-toggle="tooltip"
-                  title="Login with Google"
-                >
-                  <i aria-hidden="true" class="fa fa-google-plus"></i>
-                </a>
-              </div>
-            </div>
-          </div> -->
-          <!--end testeo-->
-          <!--registro cuenta-->
+         
+         
           <div class="form-group m-b-0">
             <div class="col-sm-12 text-center">
-              No tenes una cuenta?<a href="register" class="text-info m-l-5"
+              No tenes una cuenta?<a routerLink="/register" class="text-info m-l-5"
                 ><b>Registrarse</b></a
               >
             </div>
           </div>
         </form>
-        <!--   Recuperar password
+          <!-- Recuperar password
                     
                     <form class="form-horizontal" id="recoverform" action="index.html">
                     <div class="form-group ">

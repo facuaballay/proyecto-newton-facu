@@ -17,7 +17,9 @@ export class ServiceService {
   
   getTodo(){
 
-    let url = "https://proyectolaravelleonelyo.herokuapp.com/api/todo";
+    let url = "http://localhost/leo/public/api/todo";
+
+    
     return this.http.get(url);
   }
 

@@ -1,31 +1,51 @@
-<div class="form-group" >
-    <div class="col-xs-12">
-        <input class="form-control" type="text" required="" placeholder="Usuario" id="usuario">
+
+<div class="form-group row" >
+    <div class="col-md-6">
+        <input class="form-control" type="text" required="" placeholder="Nombre" id="nombre">
+    </div>
+
+    <div class="col-md-6">
+        <input class="form-control" type="text" required="" placeholder="Apellido" id="apellido">
     </div>
 </div>
 <div class="form-group ">
     <div class="col-xs-12">
-        <input class="form-control" type="text" required="" placeholder="Correo" id="correo">
-    </div>
-</div>
-<div class="form-group ">
-    <div class="col-xs-12">
-        <input class="form-control" type="password" required="" placeholder="Contraseña" id="password">
-    </div>
-</div>
-<div class="form-group">
-    <div class="col-xs-12">
-        <input class="form-control" type="password" required="" placeholder="Confirmar Contraseña">
+        <input class="form-control" type="text" required="" placeholder="D.N.I" id="dni">
     </div>
 </div>
 <div class="form-group row">
-    <div class="col-md-12">
-        <div class="checkbox checkbox-success p-t-0">
-            <input id="checkbox-signup" type="checkbox"  class="filled-in chk-col-light-blue">
-            <label for="checkbox-signup">Acepta los Terminos</label>
+    <div class="col-md-6">
+        <input class="form-control" type="password" required="" placeholder="Contraseña">
+    </div>
+
+
+        <div class="col-md-6">
+            <input class="form-control" type="password" required="" placeholder="Confirmar contraseña">
         </div>
     </div>
-</div>
+    <div class="form-group">
+            <div class="col-xs-12">
+                <input class="form-control" type="text" required="" placeholder="Empresa">
+            </div>
+        </div>
+        <div class="form-group row">
+                <div class="col-md-6">
+                    <input class="form-control" type="text" required="" placeholder="Pais">
+                </div>
+           
+            
+                    <div class="col-md-6">
+                        <input class="form-control" type="text" required="" placeholder="Provincia">
+                    </div>
+                </div>
+                
+                    <div class="form-group row">
+                            <div class="col-md-12">
+                            
+                             <mdb-checkbox class="checkbox-teal" [checked]="false">Acepta los Terminos</mdb-checkbox>
+                              
+                            </div>
+                        </div>
 <!--boton-->
 <div class="text-center mb-3">
 <button
@@ -38,7 +58,7 @@
     >
     Registrarse</button>
 </div>
- //empresa
+ <!-- //empresa
 nombre -> string
 apellido -> string
 documento -> number ->unico
@@ -47,4 +67,4 @@ password -> string
 ubicacion -> string
 provincia -> string
 pais -> string
-img -> archivo -->
+img -> archivo  -->

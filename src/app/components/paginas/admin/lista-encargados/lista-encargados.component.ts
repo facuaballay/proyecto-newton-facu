@@ -17,13 +17,14 @@ public todo;
 
   ngOnInit() {
   }
+  
       todos(){
         
-        this.servicio.getTodo().subscribe( data =>{
+        this.servicio.getTodo().subscribe( (data:any) =>{
           
           
-          this.todo = data;
-    
+          this.todo = data.respuesta;
+         
           console.log(this.todo);
         });
       }

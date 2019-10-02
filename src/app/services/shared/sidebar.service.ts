@@ -15,7 +15,7 @@ export class SidebarService {
         { titulo:'Historial Pedidos', url:'/historialpedidos',icono:'mdi mdi-border-color'},
       ];
   encargados:any=[
-    { titulo:'Crear Encargado', url:'/crearencargado',icono:'mdi mdi-account-plus'},
+    { titulo:'Nuevo Encargado', url:'/crearencargado',icono:'mdi mdi-account-plus'},
     { titulo:'Lista Encargados', url:'/listaencargados',icono:'mdi mdi-account-multiple'},
   ];
 }
