@@ -17,7 +17,7 @@ export class ServiceService {
   
   getTodo(){
 
-    let url = "http://localhost/leo/public/api/todo";
+    let url = "http://localhost/backend/public/api/todo";
 
     
     return this.http.get(url);

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ServiceService } from '../../../../services/service.service';
+import { EmpresaService } from '../../../../services/empresa/empresa.service';
 
 @Component({
   selector: 'app-lista-encargados',
@@ -10,23 +10,24 @@ export class ListaEncargadosComponent implements OnInit {
 
 public todo;
 
-  constructor(public servicio:ServiceService) {
+  constructor(public _EmpresaService:EmpresaService) {
 
     
    }
 
   ngOnInit() {
+
+    this._EmpresaService.listaEncargados().subscribe(res=>{
+     
+     this.todo = res;
+      console.log(res);
+    })
+  }
+
+  borrarEncargado(){
+   
   }
   
-      todos(){
-        
-        this.servicio.getTodo().subscribe( (data:any) =>{
-          
-          
-          this.todo = data.respuesta;
-         
-          console.log(this.todo);
-        });
-      }
+      
  
 }

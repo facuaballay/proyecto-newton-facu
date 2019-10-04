@@ -3,8 +3,8 @@
 <div class="card-deck row">
 
     <!-- Card -->
-    <div class="card mb-4">
-  
+    <div class="card mb-4" *ngFor="let item of pedidos">
+   {{item.id}}
       <!--Card image-->
       <div class="view overlay">
         <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">

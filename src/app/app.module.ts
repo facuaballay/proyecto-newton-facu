@@ -6,7 +6,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 //imports modulos
 import { PaginasModule } from './components/paginas/paginas.module';
-
+import { DigitOnlyModule } from '@uiowa/digit-only';
+import { RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app.routes';
 import { SharedModule } from './components/shared/shared.module';
@@ -18,7 +19,10 @@ import { FormLoginComponent } from './components/login/form-login/form-login.com
 import { FormRegisterComponent } from './components/login/register/form-register/form-register.component';
 import { FormRegisterEmpresaComponent } from './components/login/register/form-register-empresa/form-register-empresa.component';
 import { AppComponent } from './app.component';
-import { OlvidepassComponent } from './components/login/olvidepass/olvidepass.component';
+import { FormEmpresaComponent } from './components/login/form-empresa/form-empresa.component';
+import { FormEncargadoComponent } from './components/login/form-encargado/form-encargado.component';
+//pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
 
 
 
@@ -30,7 +34,9 @@ import { OlvidepassComponent } from './components/login/olvidepass/olvidepass.co
     FormLoginComponent,
     FormRegisterComponent,
     FormRegisterEmpresaComponent,
-    OlvidepassComponent,
+    FormEmpresaComponent,
+    FormEncargadoComponent,
+    NoimagePipe,
     
   ],
   imports: [
@@ -42,7 +48,9 @@ import { OlvidepassComponent } from './components/login/olvidepass/olvidepass.co
     HttpClientModule,
     SharedModule,
     FormsModule,
-    ReactiveFormsModule
+    DigitOnlyModule,
+    ReactiveFormsModule,
+    RouterModule
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],

@@ -2,19 +2,12 @@
 
 <!-- Editable table -->
 <div class="card">
-        <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Editable table</h3>
-        <div class="card-body">
-          <div id="table" class="table-editable">
-            <span class="table-add float-right mb-3 mr-2">
-              <a class="text-success" >
-                <mdb-icon fas icon="plus" size="2x"></mdb-icon>
-              </a>
-            </span>
+        <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Encargados</h3>
             <table class="table table-bordered table-responsive-md table-striped text-center">
               <tr>
                 <th class="text-center">id</th>
                 <th class="text-center">nombre</th>
-                <th class="text-center">email</th>
+                <th class="text-center">apellido</th>
                 <th class="text-center">role</th>
               </tr>
               <tr *ngFor="let item of todo; let id = index">
@@ -25,33 +18,24 @@
                   <span contenteditable="true" >{{item.nombre}}</span>
                 </td>
                 <td>
-                  <span contenteditable="true">{{item.email}}</span>
+                  <span contenteditable="true">{{item.apellido}}</span>
                 </td>
                 <td>
                   <span contenteditable="true">{{item.role}}</span>
                 </td>
-              
                 <td>
-                  <span class="table-up">
-                    <a class="indigo-text">
-                      <mdb-icon fas icon="long-arrow-alt-up"></mdb-icon>
-                    </a>
-                  </span>
-                  <span class="table-down">
-                    <a class="indigo-text">
-                      <mdb-icon fas icon="long-arrow-alt-down"></mdb-icon>
-                    </a>
-                  </span>
-                </td>
+                    <button mdbBtn type="submit" gradient="purple" rounded="true" block="true" mdbWavesEffect>
+                  borrar
+                  </button>
+              </td>
+                  
                
               </tr>
             </table>
           </div>
-        </div>
-      </div>
+      
       <!-- Editable table -->
 
 
 
 
-<button (click)="todos()">enviar</button>

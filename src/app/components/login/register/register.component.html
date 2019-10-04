@@ -2,12 +2,9 @@
         <div class="login-register" style="background-image:url(../assets/images/background/prueva.jpg);">
             <div class="login-box card">
                 <div class="card-body">
-                    
-             <form ngNativeValidate class="form-horizontal form-material"  action="index.html">
+                    <form ngNativeValidate class="form-horizontal form-material" id="loginform" action="index.html">
                             <div class="text-center">
-                                    <h3 class="dark-grey-text mb-5">
-                                      <strong>DigenSoft </strong>
-                                    </h3>
+                                    <img src="assets/images/logo-completo.png" alt="">
                                   </div>
 
                                   <!--tabs-->
@@ -18,7 +15,7 @@
                                   <div class="tab-content ">
                                         <div class="tab-pane active" id="usuario" role="tabpanel">
                                           
-                                        <app-form-register [formGroup]="formUser" ></app-form-register>
+                                        <app-form-register></app-form-register>
                                         </div>
                                         <div class="tab-pane  " id="empresa" role="tabpanel">
                                                 <app-form-register-empresa></app-form-register-empresa>

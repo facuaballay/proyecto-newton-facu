@@ -1,14 +1,3 @@
-
-     
-
-<!-- tipo -> encargado, empresa
-creador_id -> number
-nombre -> string
-descripcion -> string
-progreso -> number
-precio -> number
-user_id -> -->
-
     <div class="container" >
             <section class="form-gradient">
                     <!-- header-->
@@ -19,69 +8,63 @@ user_id -> -->
                           <h3 class="white-text mb-3 pt-3 font-weight-bold">Pedidos</h3>
                         </div>
                       </div>
-                      
-                  
                       <mdb-card-body class="mx-4 mt-4">
-                  
                         <!--Body-->
-                        <form>
-                  
+                        <form [formGroup]="formPedido" (ngSubmit)="crearPedido()">
                             <div class="row">
-                                <div class="md-form col-md-4">
-        
-                                        <div class="md-form form-group">
-                                          <input mdbInput type="text" class="form-control" id="user" >
-                                          <label >Usuario</label>
-                                        </div>
-                                      </div>
-                            
-                            <div class="md-form col-md-4">
-                                   
+                             
+                              <div class="md-form col-md-6">
                                     <div class="md-form form-group">
-                                      <input mdbInput type="text" class="form-control" id="user_id" >
-                                      <label for="userid">user_id?</label>
+                                      <input mdbInput type="text" digitOnly formControlName="user_id"  class="form-control" id="user_id" >
+                                      <label for="userid">Usuario_id</label>
                                     </div>
                             </div>
-                            <div class="md-form col-md-4">
+                           <div class="md-form col-md-6">
+                                    <div class="md-form form-group">
+                                      <input mdbInput type="text" formControlName="nombre"  class="form-control" id="user_id" >
+                                      <label for="userid">nombre</label>
+                                    </div>
+                            </div>
+                            <div class="md-form col-md-6">
                                    
                                     <div class="md-form form-group">
-                                      <input mdbInput type="number" class="form-control" id="precio" >
+                                      <input mdbInput type="text" formControlName="precio" pattern="[0-9]*" digitOnly class="form-control" id="precio" >
                                       <label for="precio">Precio</label>
                                     </div>
 
                             </div>
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                     <div class="md-form">
-                                        <textarea type="text" id="form7" class="md-textarea md-textarea-auto form-control" mdbInput></textarea>
+                                        <textarea type="text" formControlName="descripcion" class="md-textarea md-textarea-auto form-control" mdbInput></textarea>
                                         <label for="form7">Descripcion</label>
                                       </div>
                                   </div>
-                             <div class="col-md-4">
-                                    <div class="md-form">
-                                        <textarea type="text" id="form7" class="md-textarea md-textarea-auto form-control" mdbInput></textarea>
-                                        <label for="form7">Descripcion</label>
-                                      </div>
-                                    </div>     
+                          
 
                         </div>
-                       
-                              
+
+                        <div class="col-md-8">
+                            <div class="md-form">
+                                <input type="text" digitOnly formControlName="progreso" class="md-textarea md-textarea-auto form-control" mdbInput>
+                                <label for="form7">progreso</label>
+                              </div>
+                          </div>
                         <div class="text-center">
-                                    <button mdbBtn type="button" gradient="purple" rounded="true"  size="lg" mdbWavesEffect>
+                                    <button mdbBtn type="submit" gradient="purple" rounded="true"  size="lg" mdbWavesEffect>
                                             Crear Pedido
                                     </button>
-                                    <button type="button" class="btn btn-outline-primary waves-effect">Light blue</button>
 
                             </div>
-                            
-
                         </form>
                   
-                      
                       </mdb-card-body>
                   
                     </mdb-card>
                   
                   </section>
-    </div>
 
+             </div>
+
+
+
+  

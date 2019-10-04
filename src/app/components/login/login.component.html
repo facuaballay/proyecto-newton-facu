@@ -2,33 +2,29 @@
   <div class="login-register"style="background-image:url(../assets/images/background/prueva.jpg);">
     <div class="login-box card">
       <div class="card-body">
-        <form class="form-horizontal form-material" id="loginform"  (ngSubmit)="ingresar()">
+        <form class="form-horizontal form-material"   >
           <!--titulo-->
           <div class="text-center">
-              <h3 class="dark-grey-text mb-5">
-                <strong>DigenSoft (logo) </strong>
-              </h3>
+              <img src="assets/images/logo-completo.png" alt="">
             </div>
             <!--End titulo-->
             <!--tabs-->
             <ul class="nav nav-tabs customtab" role="tablist">
               
-              <li class="nav-item "> <a class="nav-link active" data-toggle="tab" href="#usuario" role="tab"> Usuario</a> </li>
-               <li class="nav-item "> <a class="nav-link" data-toggle="tab" href="#empresa" role="tab"> Empresa</a> </li>
-               <li class="nav-item "> <a class="nav-link" data-toggle="tab" href="#encargado" role="tab"> Encargado</a> </li>
+              <li class="nav-item "> <a class="nav-link active panel" data-toggle="tab" hsref="#usuario" role="tab"><i class="ti-user"></i> Usuario</a> </li>
+               <li class="nav-item "> <a class="nav-link panel" data-toggle="tab" href="#empresa" role="tab"><i class="ti-home"></i> Empresa</a> </li>
+               <li class="nav-item "> <a class="nav-link panel" data-toggle="tab" href="#encargado" role="tab"><i class="mdi mdi-account-card-details"></i> Encargado</a> </li>
                    </ul>
               <div class="tab-content ">
-                    <div class="tab-pane active " id="usuario" role="tabpanel">
+                    <div class="tab-pane active" id="usuario" role="tabpanel">
                       
                     <app-form-login ></app-form-login>
                     </div>
                     <div class="tab-pane " id="empresa" role="tabpanel">
-                      <app-form-login></app-form-login>
-                      <h1>empresa</h1>
+                      <app-form-empresa></app-form-empresa>
                     </div>
                     <div class="tab-pane " id="encargado" role="tabpanel">
-                      <app-form-login></app-form-login>
-                      <h1>enacargado</h1>
+                      <app-form-encargado></app-form-encargado>
                     </div>
                     
                 </div>

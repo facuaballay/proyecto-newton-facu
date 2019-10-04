@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { EmpresaService } from '../../services/empresa/empresa.service';
 
 
 declare function init_plugins();
@@ -11,12 +12,12 @@ declare function init_plugins();
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public router:Router) { }
+  constructor(public router:Router,public empresa:EmpresaService) { }
 
   ngOnInit() {
     init_plugins();
   }
-  ingresar(){
-    this.router.navigate(['/mispedidos'])
-  }
+ 
+
+
 }

@@ -12,8 +12,10 @@ import { HomeComponent } from './home/home.component';
 //rutas
 import { PAGES_ROUTES } from './paginas.routes';
 //modulos
+import { DigitOnlyModule } from '@uiowa/digit-only';
 import { SharedModule } from '../shared/shared.module';
 import { NavegacionComponent } from './navegacion/navegacion.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     declarations:[ 
@@ -32,6 +34,10 @@ import { NavegacionComponent } from './navegacion/navegacion.component';
         MDBBootstrapModule.forRoot(),
         PAGES_ROUTES,
         SharedModule,
+        FormsModule,
+        ReactiveFormsModule,
+        DigitOnlyModule
+        
          ],
     providers: [],
     exports:[

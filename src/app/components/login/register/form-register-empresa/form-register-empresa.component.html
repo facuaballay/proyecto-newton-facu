@@ -1,48 +1,57 @@
+<form ngNativeValidate class="form-horizontal form-material" [formGroup]="formEmpresa" (ngSubmit)="registrarEmpresa()">
 
 <div class="form-group row" >
     <div class="col-md-6">
-        <input class="form-control" type="text" required="" placeholder="Nombre" id="nombre">
+        <input class="form-control" formControlName="nombre" type="text" required placeholder="Nombre" id="nombre">
+       
+        
     </div>
 
     <div class="col-md-6">
-        <input class="form-control" type="text" required="" placeholder="Apellido" id="apellido">
+        <input class="form-control" formControlName="apellido" type="text" required placeholder="Apellido" id="apellido">
     </div>
 </div>
 <div class="form-group ">
     <div class="col-xs-12">
-        <input class="form-control" type="text" required="" placeholder="D.N.I" id="dni">
+        <input class="form-control" formControlName="documento" 
+         digitOnly maxlength="8" type="text" required placeholder="D.N.I(solo numeros)" id="dni">
+        
     </div>
 </div>
 <div class="form-group row">
     <div class="col-md-6">
-        <input class="form-control" type="password" required="" placeholder="Contraseña">
+        <input class="form-control" formControlName="password" type="password" required placeholder="Contraseña">
     </div>
 
 
         <div class="col-md-6">
-            <input class="form-control" type="password" required="" placeholder="Confirmar contraseña">
+            <input class="form-control" formControlName="password2" type="password" required  placeholder="Confirmar contraseña">
         </div>
     </div>
-    <div class="form-group">
-            <div class="col-xs-12">
-                <input class="form-control" type="text" required="" placeholder="Empresa">
+    <div class="form-group row ">
+            <div class="col-md-6">
+                <input class="form-control" formControlName="empresa" type="text" required  placeholder="Empresa">
             </div>
+
+            <div class="col-md-6">
+                <input class="form-control" formControlName="ubicacion" type="text" required  placeholder="direccion">
+            </div> 
         </div>
         <div class="form-group row">
                 <div class="col-md-6">
-                    <input class="form-control" type="text" required="" placeholder="Pais">
+                    <input class="form-control"formControlName="pais"  type="text" required placeholder="Pais">
                 </div>
            
             
                     <div class="col-md-6">
-                        <input class="form-control" type="text" required="" placeholder="Provincia">
+                        <input class="form-control" formControlName="provincia" type="text" required placeholder="Provincia">
                     </div>
                 </div>
                 
                     <div class="form-group row">
                             <div class="col-md-12">
                             
-                             <mdb-checkbox class="checkbox-teal" [checked]="false">Acepta los Terminos</mdb-checkbox>
+                             <mdb-checkbox class="checkbox-teal" formControlName="condiciones" [checked]="false">Acepta los Terminos</mdb-checkbox>
                               
                             </div>
                         </div>
@@ -50,7 +59,7 @@
 <div class="text-center mb-3">
 <button
     mdbBtn
-    type="button"
+    type="submit"
     gradient="purple"
     rounded="true"
     block="true"
@@ -58,13 +67,6 @@
     >
     Registrarse</button>
 </div>
- <!-- //empresa
-nombre -> string
-apellido -> string
-documento -> number ->unico
-nombreEmpresa -> string
-password -> string
-ubicacion -> string
-provincia -> string
-pais -> string
-img -> archivo  -->
+
+
+</form>

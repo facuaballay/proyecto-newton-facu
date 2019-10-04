@@ -1,48 +1,35 @@
+<form ngNativeValidate class="form-horizontal form-material" [formGroup]="formUser" (ngSubmit)="registrarUsuario()">
 <div class="form-group">
         <div class="col-xs-12">
-            <input class="form-control" formControlName="usuario" type="text" required="" placeholder="Usuario" id="usuario">
+            <input class="form-control" formControlName="usuario" required type="text" required="" placeholder="Usuario" id="usuario">
+        
         </div>
     </div>
     <div class="form-group ">
         <div class="col-xs-12">
-            <input class="form-control" formControlName="email" type="email" required="" placeholder="Correo" id="correo">
+            <input class="form-control" formControlName="email" required type="email" required="" placeholder="Correo" id="correo">
         </div>
     </div>
     <div class="form-group ">
         <div class="col-xs-12">
-            <input class="form-control" formControlName="password1" type="password" required="" placeholder="Contraseña" id="password">
+            <input class="form-control" formControlName="password" required type="password" required="" placeholder="Contraseña" id="password">
         </div>
     </div>
     <div class="form-group">
         <div class="col-xs-12">
-            <input class="form-control" formControlName="password2" type="password" required="" placeholder="Confirmar Contraseña">
+            <input class="form-control" formControlName="password2" required type="password" required="" placeholder="Confirmar Contraseña">
         </div>
     </div>
     <div class="form-group row">
         <div class="col-md-12">
-           
-                    <mdb-checkbox class="checkbox-teal" [checked]="false">Acepta los Terminos</mdb-checkbox>
-
-               
-           
+                    <mdb-checkbox class="checkbox-teal" formControlName="condiciones" required [checked]="false">Acepta los Terminos</mdb-checkbox>   
         </div>
     </div>
   <!--boton-->
-<div class="text-center mb-3">
-<button
-mdbBtn
-type="button"
-gradient="purple"
-rounded="true"
-block="true"
-mdbWavesEffect
->
-Registrarse
-</button>
-</div>
-<!-- 
-//usuario
-usuario -> string ->unico
-email -> string
-img -> archivo
-password -> password encriptada, como llega se guarda -->
+    <div class="text-center mb-3">
+        <button mdbBtn type="submit" gradient="purple" rounded="true" block="true" mdbWavesEffect >
+            Registrarse
+        </button>
+    </div>
+
+</form>

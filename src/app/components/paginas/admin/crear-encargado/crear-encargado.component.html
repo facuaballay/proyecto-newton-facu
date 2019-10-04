@@ -1,7 +1,5 @@
 
 
-
-
 <div class="container" >
     <section class="form-gradient">
         <!-- header-->
@@ -9,7 +7,7 @@
             <div class="header pt-3 blue-grey darken-3">
                 
                 <div class="row d-flex justify-content-center">
-                    <h3 class="white-text mb-3 pt-3 font-weight-bold">Pedidos</h3>
+                    <h3 class="white-text mb-3 pt-3 font-weight-bold">Encargados</h3>
                 </div>
             </div>
             
@@ -17,19 +15,14 @@
             <mdb-card-body class="mx-4 mt-4">
                 
                 <!--Body-->
-                <form>
-                        empresa_id -> number
-                    nombre -> sring
-                    apellido -> sring
-                    usuario -> sring, unico
-                    password -> sring
-                    img -> archivo
+                <form   [formGroup]="formEncargado" (ngSubmit)="crearEncargado()">
+                  
           
                     <div class="row">
                         <div class="md-form col-md-6">
 
                                 <div class="md-form form-group">
-                                  <input mdbInput type="text" class="form-control" id="nombreEncargado" >
+                                  <input mdbInput type="text" class="form-control" required id="nombreEncargado" formControlName="nombre"  >
                                   <label >Nombre</label>
                                 </div>
                               </div>
@@ -37,14 +30,14 @@
                     <div class="md-form col-md-6">
                            
                             <div class="md-form form-group">
-                              <input mdbInput type="text" class="form-control" id="apellidoEncargado" >
+                              <input mdbInput type="text" class="form-control" required formControlName="apellido"  id="apellidoEncargado" >
                               <label for="apellido">Apellido</label>
                             </div>
                     </div>
                     <div class="md-form col-md-6">
                            
                             <div class="md-form form-group">
-                              <input mdbInput type="text" class="form-control" id="usuarioEncargado" >
+                              <input mdbInput type="text" class="form-control" required formControlName="usuario" id="usuarioEncargado" >
                               <label for="precio">Usuario</label>
                             </div>
 
@@ -52,26 +45,32 @@
                     <div class="md-form col-md-6">
                            
                             <div class="md-form form-group">
-                              <input mdbInput type="password" class="form-control" id="passEncargado" >
-                              <label for="precio">Password</label>
+                              <input mdbInput type="password" class="form-control" required formControlName="password" id="passEncargado" >
+                              <label for="precio">Contraseña</label>
                             </div>
 
                     </div>
-                    <div class="md-form col-md-4">
+                    <div class="md-form col-md-6">
                            
-                            <div class="md-form form-group">
-                              <input mdbInput type="text" class="form-control" id="o" >
-                              <label for="precio">empresa?</label>
-                            </div>
-                        </div>
+                      <div class="md-form form-group">
+                        <input mdbInput type="password" class="form-control" required formControlName="password2"  >
+                        <label for="precio">Confirmar Contraseña</label>
+                      </div>
+                      
+
+              </div>
+             
+
+            
+                
                         
-                        <h1>img</h1>
+                        
                 </div>
                
                       
                 <div class="text-center">
-                            <button mdbBtn type="button" gradient="purple" rounded="true"  size="lg" mdbWavesEffect>
-                                    Crear Pedido
+                            <button mdbBtn type="submit" gradient="purple" rounded="true"  size="lg" mdbWavesEffect>
+                                    Crear Encargado
                             </button>
                             
                         </div>
@@ -85,6 +84,7 @@
             
         </section>
     </div>
+   
     
     
     

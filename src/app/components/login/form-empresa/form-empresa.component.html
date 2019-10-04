@@ -1,33 +1,30 @@
-<form ngNativeValidate (ngSubmit)="loginUsuario(formuser)" #formuser="ngForm" >
-  <div class="form-group">
+<form ngNativeValidate (ngSubmit)="loginEmpresa(formulario)" #formulario="ngForm" >
+<div class="form-group">
     <div class="col-xs-12">
       <input
         ngModel
         class="form-control"
         type="text"
         required
-        placeholder="Usuario"
-        name="usuario"
+        placeholder="Documento"
+        digitOnly maxlength="8"
+        name="documento"
       />
     </div>
   </div>
   <div class="form-group">
     <div class="col-xs-12">
       <input
-        ngModel
+      ngModel
+      name="password"
         class="form-control"
         type="password"
         required
         placeholder="Contraseña"
-        name="password"
       />
     </div>
   </div>
-  <div class="form-group row">
-      <div class="col-md-12">
-    
-    </div>
-  </div>
+
   <!--end-->
   <!--boton-->
   <div class="text-center mb-3">
@@ -42,5 +39,4 @@
     Entrar 
     </button>
   </div>
-
 </form>  
