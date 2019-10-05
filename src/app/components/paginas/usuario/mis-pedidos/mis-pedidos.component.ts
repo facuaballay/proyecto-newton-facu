@@ -26,35 +26,35 @@ export class MisPedidosComponent implements OnInit {
         
        this.pedidos = res;
        
-       console.log("hola",this.pedidos);
      });
+    }
+
 
     
-    
     if(localStorage.getItem('empresa')){
+
       this._EmpresaService.pedidosEmpresa().subscribe(res=>{
         
        this.pedidos = res;
        
-       console.log("hola",this.pedidos);
-     });
+ 
 
+      });
     }
  
     if(localStorage.getItem('usuario')){
       this._usuarioService.pedidosUsuarios().subscribe(res=>{
         
        this.pedidos = res;
-       
-       console.log("hola",this.pedidos);
+        
+      
      });
+   }
 
-    }
+}  
 
-    
-
-  }
   
   
   
-}}
+  
+}

@@ -19,7 +19,7 @@ export class PedidosService {
     
   }
 
-  crearUsuario(pedido:Pedido){
+  crearPedido(pedido:Pedido){
 
     
     let token = localStorage.getItem('token');

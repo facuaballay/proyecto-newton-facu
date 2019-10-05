@@ -7,17 +7,19 @@
                     <li class="nav-devider"></li>
                     <li class="nav-small-cap">PEDIDOS</li> 
                 <li *ngFor="let pedidos of _sidebar.pedidos" >
-                    <a class="has-arrow waves-effect waves-dark titulos"   aria-expanded="false" routerLinkActive="active"  [routerLink]="[pedidos.url]" >
+                    <a class="has-arrow waves-effect waves-dark titulos" *ngIf="pedidos.tipo != usuario"  aria-expanded="false" routerLinkActive="active"  [routerLink]="[pedidos.url]" >
                         <i [class]="pedidos.icono"></i><span class="hide-menu align-middle titulo">{{pedidos.titulo}}</span></a> 
                         <ul aria-expanded="false" class="collapse"> </ul>
                 </li>
                <li class="nav-devider"></li>
-                <li class="nav-small-cap">ENCARGADOS</li>        
-                    <li *ngFor="let encargados of _sidebar.encargados">
-                        <a class="has-arrow waves-effect waves-dark titulos"  routerLinkActive="active"  [routerLink]="[encargados.url]" routerLinkActive="active">
+               
+                <li class="nav-small-cap" *ngIf="!usuario">ENCARGADOS</li>        
+                    <li *ngFor="let encargados of _sidebar.encargados" >
+                        <a *ngIf="!usuario && empresa" class="has-arrow waves-effect waves-dark titulos"   routerLinkActive="active"  [routerLink]="[encargados.url]" routerLinkActive="active">
                             <i [class]="encargados.icono"></i><span class="hide-menu ">{{encargados.titulo}}</span></a>
                             <ul aria-expanded="false" class="collapse"> </ul>
-                </li>   
+                </li>
+              
             </ul>
         </nav>
        <!-- Sidebar End-->

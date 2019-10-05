@@ -4,7 +4,7 @@
 
 <!-- Editable table -->
 <div class="card">
-    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Encargados</h3>
+    <h3 class="card-header text-center font-weight-bold text-uppercase py-4">Pedidos</h3>
         <table class="table table-bordered table-responsive-md table-striped text-center">
           <tr>
             <th class="text-center">id</th>
@@ -12,10 +12,10 @@
             <th class="text-center">email</th>
             <th class="text-center">role</th>
           </tr>
-          <tr *ngFor="let item of historialEncargado">
-            <!-- <td>
+          <tr *ngFor="let item of historialEmpresa">
+            <td>
               <span contenteditable="true">{{item.id}}</span>
-            </td> -->
+            </td>
             <td>
               <span contenteditable="true" >{{item.nombre}}</span>
             </td>

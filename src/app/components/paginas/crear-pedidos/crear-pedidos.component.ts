@@ -15,15 +15,22 @@ export class CrearPedidosComponent implements OnInit {
   formPedido: FormGroup;
   todolisto:any;
 
-  porcentaje:number = 90;
 
   constructor(public _PedidosService:PedidosService) { }
 
   ngOnInit() {
 
-    var id = localStorage.getItem('empresa');
+    if(localStorage.getItem('encargado')){
 
-    this.todolisto = JSON.parse(id);
+      var id = localStorage.getItem('encargado');
+      this.todolisto = JSON.parse(id);
+    }
+    if(localStorage.getItem('empresa')){
+
+      var id = localStorage.getItem('empresa');
+      this.todolisto = JSON.parse(id);
+    }
+    
 
     this.formPedido = new FormGroup({
       tipo:new FormControl(`${this.todolisto.role}` , Validators.required),
@@ -50,7 +57,7 @@ crearPedido(){
     this.formPedido.value.user_id
    
       )
-      this._PedidosService.crearUsuario(pedido).subscribe(res=>{
+      this._PedidosService.crearPedido(pedido).subscribe(res=>{
         
       })
 

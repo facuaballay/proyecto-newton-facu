@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
-import { map } from 'rxjs/operators';
+import { map, filter } from 'rxjs/operators';
 //url
 import { URL_SERVICE } from '../../config/config';
 //model
@@ -55,7 +55,7 @@ export class EmpresaService {
   listaEncargados(){
     let id = JSON.parse( localStorage.getItem('empresa'));
             
-    let url = URL_SERVICE + `/empresa/${id.id}`;
+    let url = URL_SERVICE + `/empresa/encargados/${id.id}`;
 
     let token = localStorage.getItem('token');
 
@@ -64,11 +64,12 @@ export class EmpresaService {
      const headers = new HttpHeaders().append('Content-Type', 'application/json').append('token', token);
     
  
-     return this.http.get(url,{headers}).pipe(map(res=> res['respuesta'].encargados) )
+     return this.http.get(url,{headers}).pipe(map(res=> res['respuesta'].encargado_sin_pedido) )
    
   }
   
   historialPedidosEncargados(){
+    
     let id = JSON.parse( localStorage.getItem('empresa'));
             
     let url = URL_SERVICE + `/empresa/historial/${id.id}`;
@@ -101,15 +102,9 @@ export class EmpresaService {
 
     return this.http.get(url,{headers}).pipe(map(res=> res['respuesta'].pedidos) )
   }
-  // borrarEncargado(){
-  //   let id = JSON.parse( localStorage.getItem('empresa'));
-
-  //   let url = URL_SERVICE + `/empresa/${id.id}`;
-
-  //   let token = localStorage.getItem('token');
-  // }        
- }
+  
+ 
 
 
 
-
+}

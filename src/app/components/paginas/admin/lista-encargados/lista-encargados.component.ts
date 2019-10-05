@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EmpresaService } from '../../../../services/empresa/empresa.service';
+import { HttpClient } from '@angular/common/http';
+import { URL_SERVICE } from '../../../../config/config';
 
 @Component({
   selector: 'app-lista-encargados',
@@ -9,24 +11,28 @@ import { EmpresaService } from '../../../../services/empresa/empresa.service';
 export class ListaEncargadosComponent implements OnInit {
 
 public todo;
-
-  constructor(public _EmpresaService:EmpresaService) {
+public borrarencargado;
+  constructor(public _EmpresaService:EmpresaService,public http:HttpClient) {
 
     
    }
 
   ngOnInit() {
 
-    this._EmpresaService.listaEncargados().subscribe(res=>{
+   this._EmpresaService.listaEncargados().subscribe(res=>{
+       
+       this.todo = res;
      
-     this.todo = res;
-      console.log(res);
-    })
+        console.log(this.todo['id']);
+      })
+
+
   }
 
-  borrarEncargado(){
-   
-  }
+  
+    
+  
+  
   
       
  

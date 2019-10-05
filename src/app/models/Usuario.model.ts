@@ -1,6 +1,5 @@
 export class Usuario{
 
-    imagen:any = 'assets/images/logo';
 
     constructor(
         public usuario:string,

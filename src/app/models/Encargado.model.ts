@@ -1,4 +1,3 @@
-import { Empresa } from './Empresa.model';
 
 export class Encargado{
         constructor(

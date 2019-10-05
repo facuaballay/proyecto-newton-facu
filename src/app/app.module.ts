@@ -21,8 +21,10 @@ import { FormRegisterEmpresaComponent } from './components/login/register/form-r
 import { AppComponent } from './app.component';
 import { FormEmpresaComponent } from './components/login/form-empresa/form-empresa.component';
 import { FormEncargadoComponent } from './components/login/form-encargado/form-encargado.component';
-//pipes
-import { NoimagePipe } from './pipes/noimage.pipe';
+//guards
+import { RutasGuard } from './services/guards/rutas.guard';
+import { RoleEmpresaGuard } from './services/guards/roleEmpresa.guard';
+
 
 
 
@@ -36,7 +38,8 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     FormRegisterEmpresaComponent,
     FormEmpresaComponent,
     FormEncargadoComponent,
-    NoimagePipe,
+   
+    
     
   ],
   imports: [
@@ -54,7 +57,7 @@ import { NoimagePipe } from './pipes/noimage.pipe';
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [],
+  providers: [RutasGuard,RoleEmpresaGuard],
   
   bootstrap: [AppComponent]
 })

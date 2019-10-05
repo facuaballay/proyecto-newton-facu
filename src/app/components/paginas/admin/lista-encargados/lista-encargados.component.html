@@ -10,28 +10,26 @@
                 <th class="text-center">apellido</th>
                 <th class="text-center">role</th>
               </tr>
-              <tr *ngFor="let item of todo; let id = index">
-                <td>
-                  <span contenteditable="true">{{item.id}}</span>
+              <tr *ngFor="let item of todo" >
+                 
+                <td *ngIf="item.estado === 'true'">
+                  <span>{{item.id}}</span>
                 </td>
-                <td>
+                <td *ngIf="item.estado === 'true'">
                   <span contenteditable="true" >{{item.nombre}}</span>
                 </td>
-                <td>
+                <td *ngIf="item.estado === 'true'"> 
                   <span contenteditable="true">{{item.apellido}}</span>
                 </td>
-                <td>
+                <td *ngIf="item.estado === 'true'">
                   <span contenteditable="true">{{item.role}}</span>
                 </td>
-                <td>
-                    <button mdbBtn type="submit" gradient="purple" rounded="true" block="true" mdbWavesEffect>
-                  borrar
-                  </button>
-              </td>
+                
                   
-               
+            
               </tr>
             </table>
+
           </div>
       
       <!-- Editable table -->

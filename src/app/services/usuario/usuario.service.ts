@@ -46,7 +46,7 @@ export class UsuarioService {
 
                       localStorage.setItem('usuario',JSON.stringify(resp.respuesta));
       
-                      console.log(resp);
+                      
                 }));              
           };
      

@@ -11,6 +11,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 //navbar
 import { NavbarComponent } from './navbar/navbar.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { NoimageUserPipe } from '../../pipes/noimageUser.pipe';
+import { ImagenService } from '../../services/shared/imagen.service';
 
 
 
@@ -18,14 +20,18 @@ import { SidebarComponent } from './sidebar/sidebar.component';
 @NgModule({
     declarations:
         [ NavbarComponent,  
-          SidebarComponent ],
-          imports: [
+          SidebarComponent,
+          NoimageUserPipe
+        ],
+        imports: [
               RouterModule,
               CommonModule,
               BrowserModule,
               MDBBootstrapModule.forRoot() 
         ],
-    providers: [],
+    providers: [
+        ImagenService
+    ],
     exports:[
         NavbarComponent,
         SidebarComponent 

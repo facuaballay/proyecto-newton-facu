@@ -4,7 +4,7 @@
         <!-- Logo -->
         <!-- ============================================================== -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" >
                 <!-- Logo icon --><b>
                     <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
                     <!-- Dark Logo icon -->
@@ -30,29 +30,29 @@
                 <li class="nav-item"> <a class="nav-link sidebartoggler hidden-sm-down waves-effect waves-dark" href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
                 <li class="nav-item hidden-sm-down"></li>
             </ul>
-            <!-- ============================================================== -->
-            <!-- User profile and search -->
-            <!-- ============================================================== -->
+
             <ul class="navbar-nav my-lg-0">
                 
                
                
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/users/1.jpg" alt="user" class="profile-pic" /></a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img [src]="infoLista.img | noimageUser" alt="user" class="profile-pic" /></a>
                     <div class="dropdown-menu dropdown-menu-right animated flipInY">
                         <ul class="dropdown-user">
                             <li>
+                                
                                 <div class="dw-user-box">
-                                    <div class="u-img"><img src="assets/images/users/1.jpg" alt="user"></div>
+                                    <div class="u-img"><img [src]="infoLista.img | noimageUser" alt="user"></div>
                                     <div class="u-text">
-                                        <h4>Steave Jobs</h4>
-                                        <p class="text-muted">varun@gmail.com</p></div>
+                                        <h4 class="text-secondary" *ngIf="infoLista.role === 'empresa'">{{infoLista.nombreEmpresa}}</h4>
+                                        <h4 class="text-secondary" >{{infoLista.usuario}}</h4>
+                                        <p class="text-muted" id="texto">ID De Usuario:{{infoLista.id}}</p></div>
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="ti-user"></i> Editar Perfil</a></li>
+                            <li><a ><i class="ti-user"></i> Editar Perfil</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><i class="fa fa-power-off"></i> Cerrar Sesion</a></li>
+                            <li><a (click)="logout()"><i class="fa fa-power-off"></i> Cerrar Sesion</a></li>
                         </ul>
                     </div>
                 </li>

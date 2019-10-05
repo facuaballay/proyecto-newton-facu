@@ -1,4 +1,4 @@
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule, CanActivate } from '@angular/router';
 
 
 //components admin
@@ -11,15 +11,19 @@ import { MisPedidosComponent } from './usuario/mis-pedidos/mis-pedidos.component
 
 //componentes home
 import { HomeComponent } from './home/home.component';
+import { RutasGuard } from '../../services/guards/rutas.guard';
+import { RoleEmpresaGuard } from '../../services/guards/roleEmpresa.guard';
 
 
 const routes: Routes = [
   {
     path: "",
     component: HomeComponent,
+     canActivate:[RutasGuard],
+    
     children: [
-      { path: "crearencargado", component:CrearEncargadoComponent,data:{titulo:'Nuevo Encargado'} },
-      { path: "listaencargados", component: ListaEncargadosComponent,data:{titulo:'Lista Encargados'} },
+      { path: "crearencargado", component:CrearEncargadoComponent,canActivate:[RoleEmpresaGuard],data:{titulo:'Nuevo Encargado'} },
+      { path: "listaencargados", component: ListaEncargadosComponent,canActivate:[RoleEmpresaGuard],data:{titulo:'Lista Encargados'} },
       { path: "crearpedido", component: CrearPedidosComponent,data:{titulo:'Crear Pedido'} },
       { path: "historialpedidos", component: HistorialPedidosComponent,data:{titulo:'Historial Pedidos'} },
       { path: "mispedidos", component:MisPedidosComponent,data:{titulo:'Mis Pedidos'} },

@@ -8,7 +8,8 @@ export class Pedido{
         public descripcion:string,
         public progreso:number,
         public precio:number,
-        public user_id:number
+        public user_id:number,
+    
     ){
 
     }

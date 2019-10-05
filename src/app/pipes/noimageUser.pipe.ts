@@ -1,20 +1,20 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'noimage'
+  name: 'noimageUser'
 })
-export class NoimagePipe implements PipeTransform {
+export class NoimageUserPipe implements PipeTransform {
 
   transform( images: any[] ): string {
 
     if ( !images ) {
-      return 'assets/images/no-image.png';
+      return 'assets/images/users/default.png';
     }
   
     if ( images.length > 0 ) {
       return images[0].url;
     } else {
-      return 'assets/images/no-image.png';
+      return 'assets/images/users/default.png';
     }
 
   }
