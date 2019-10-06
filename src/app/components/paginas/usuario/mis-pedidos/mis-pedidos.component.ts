@@ -21,7 +21,7 @@ export class MisPedidosComponent implements OnInit {
   ngOnInit() {
 
     
-    if(localStorage.getItem('encargado')){
+    if(sessionStorage.getItem('encargado')){
       this._EncargadoService.pedidosEncargado().subscribe(res=>{
         
        this.pedidos = res;
@@ -31,7 +31,7 @@ export class MisPedidosComponent implements OnInit {
 
 
     
-    if(localStorage.getItem('empresa')){
+    if(sessionStorage.getItem('empresa')){
 
       this._EmpresaService.pedidosEmpresa().subscribe(res=>{
         
@@ -42,7 +42,7 @@ export class MisPedidosComponent implements OnInit {
       });
     }
  
-    if(localStorage.getItem('usuario')){
+    if(sessionStorage.getItem('usuario')){
       this._usuarioService.pedidosUsuarios().subscribe(res=>{
         
        this.pedidos = res;

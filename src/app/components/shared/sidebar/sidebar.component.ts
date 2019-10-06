@@ -13,23 +13,23 @@ export class SidebarComponent implements OnInit {
     usuario;
   constructor(public _sidebar:SidebarService,public Child:ChildService) {
 
-    if(localStorage.getItem('usuario')){
+    if(sessionStorage.getItem('usuario')){
 
-      this.usuario =JSON.parse(localStorage.getItem('usuario'));
-      this.usuario = this.usuario.role
-      console.log(this.usuario);
+      this.usuario =JSON.parse(sessionStorage.getItem('usuario'));
+      this.usuario = this.usuario.role;
+      
     }
-    if(localStorage.getItem('empresa')){
+    if(sessionStorage.getItem('empresa')){
 
-      this.empresa =JSON.parse(localStorage.getItem('empresa'));
+      this.empresa =JSON.parse(sessionStorage.getItem('empresa'));
       this.empresa = this.empresa.role;
-      console.log(this.empresa);
+     
     }
-    if(localStorage.getItem('encargado')){
+    if(sessionStorage.getItem('encargado')){
 
-      this.encargado =JSON.parse(localStorage.getItem('encargado'));
+      this.encargado =JSON.parse(sessionStorage.getItem('encargado'));
       this.encargado = this.encargado.role;
-      console.log(this.encargado);
+      
     }
    
     
@@ -39,5 +39,6 @@ export class SidebarComponent implements OnInit {
   ngOnInit() {
    
   }
+  
   
 }

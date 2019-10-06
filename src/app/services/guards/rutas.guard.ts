@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanActivate, Router } from '@angular/router';
+import { CanActivate, Router } from '@angular/router';
 
 import { RutasService } from './rutas.service';
 
@@ -14,10 +14,10 @@ export class RutasGuard implements  CanActivate {
       canActivate() {
 
         if (this.proteger.estaLogueado() ) {
-          console.log( 'PASO EL GUARD');
+          
           return true;
         } else {
-          console.log( 'Bloqueado por guard' );
+          swal('error','No tenes Autorizacion','error' );
           this.router.navigate(['/login']);
           return false;
         }

@@ -22,14 +22,14 @@
                            <div class="md-form col-md-6">
                                     <div class="md-form form-group">
                                       <input mdbInput type="text" formControlName="nombre"  class="form-control" id="user_id" >
-                                      <label for="userid">nombre</label>
+                                      <label for="userid">Producto</label>
                                     </div>
                             </div>
                             <div class="md-form col-md-6">
                                    
                                     <div class="md-form form-group">
                                       <input mdbInput type="text" formControlName="precio" pattern="[0-9]*" digitOnly class="form-control" id="precio" >
-                                      <label for="precio">Precio</label>
+                                      <label for="precio">$</label>
                                     </div>
 
                             </div>
@@ -45,7 +45,7 @@
 
                         <div class="col-md-8">
                             <div class="md-form">
-                                <input type="text" digitOnly formControlName="progreso" class="md-textarea md-textarea-auto form-control" mdbInput>
+                                <input type="text" digitOnly maxlength="3" pattern="[0-9]*" formControlName="progreso" class="md-textarea md-textarea-auto form-control" mdbInput>
                                 <label for="form7">progreso</label>
                               </div>
                           </div>
@@ -65,6 +65,4 @@
 
              </div>
 
-
-
-  
+    

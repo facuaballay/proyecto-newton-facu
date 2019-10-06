@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {  CanActivate, CanActivateChild } from '@angular/router';
+import { CanActivate, CanActivateChild, Router } from '@angular/router';
 
 import { ChildService } from './child.service';
 
@@ -9,7 +9,7 @@ import { ChildService } from './child.service';
 export class RoleEmpresaGuard implements CanActivate {
 
     constructor(
-      public _ChildService:ChildService
+      public _ChildService:ChildService,public router:Router
     ) { }
   
     canActivate() {
@@ -18,7 +18,8 @@ export class RoleEmpresaGuard implements CanActivate {
         return true;
       }else{
         swal('error','No tienes Autorizacion','error');
-        return;
+        this.router.navigate(['/mispedidos'])
+        return false;
       }
       
 

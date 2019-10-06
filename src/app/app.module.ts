@@ -24,6 +24,7 @@ import { FormEncargadoComponent } from './components/login/form-encargado/form-e
 //guards
 import { RutasGuard } from './services/guards/rutas.guard';
 import { RoleEmpresaGuard } from './services/guards/roleEmpresa.guard';
+import { RoleEncargadoGuard } from './services/guards/role-encargado.guard';
 
 
 
@@ -38,6 +39,7 @@ import { RoleEmpresaGuard } from './services/guards/roleEmpresa.guard';
     FormRegisterEmpresaComponent,
     FormEmpresaComponent,
     FormEncargadoComponent,
+    
    
     
     
@@ -57,7 +59,7 @@ import { RoleEmpresaGuard } from './services/guards/roleEmpresa.guard';
     
   ],
   schemas: [ NO_ERRORS_SCHEMA ],
-  providers: [RutasGuard,RoleEmpresaGuard],
+  providers: [RutasGuard,RoleEmpresaGuard,RoleEncargadoGuard],
   
   bootstrap: [AppComponent]
 })

@@ -17,7 +17,7 @@ public historialEmpresa = [];
 
   ngOnInit() {
 
-    if(localStorage.getItem('empresa')){
+    if(sessionStorage.getItem('empresa')){
       this._EmpresaService.historialPedidosEncargados().subscribe(res=>{
        
         res.forEach(elemento => {
@@ -33,14 +33,7 @@ public historialEmpresa = [];
         
        })
     };
-    if(localStorage.getItem('encargado')){
-     
-       
-      this._encargadoService.pedidosEncargado().subscribe(res =>{
-        this.historialEmpresa = res;
-
-      })
-    };
+   
 
   }
 

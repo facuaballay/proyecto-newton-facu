@@ -19,7 +19,7 @@ export class CrearEncargadoComponent implements OnInit {
 
   ngOnInit() {
    
-    var id = localStorage.getItem('empresa');
+    var id = sessionStorage.getItem('empresa');
 
     this.idlisto = JSON.parse(id);
     

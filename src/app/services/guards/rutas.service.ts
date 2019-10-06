@@ -21,24 +21,28 @@ export class RutasService {
     
   }
   estaLogueado() {
-    return ( this.token.length > 5 ) ? true : false;
+    if ( localStorage.getItem('token')) {
+      
+      return this.token;
+       }
+   
   }
 
   cargarStorage() {
 
     if ( localStorage.getItem('token')) {
       this.token = localStorage.getItem('token');
-      this.usuario = JSON.parse( localStorage.getItem('usuario') );
+      this.usuario = JSON.parse( sessionStorage.getItem('usuario') );
      
     } 
     if ( localStorage.getItem('token')) {
       this.token = localStorage.getItem('token');
-      this.usuario = JSON.parse( localStorage.getItem('empresa') );
+      this.usuario = JSON.parse( sessionStorage.getItem('empresa') );
       
     } 
     if ( localStorage.getItem('token')) {
       this.token = localStorage.getItem('token');
-      this.usuario = JSON.parse( localStorage.getItem('encargado') );
+      this.usuario = JSON.parse( sessionStorage.getItem('encargado') );
     
     } 
  

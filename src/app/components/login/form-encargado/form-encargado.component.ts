@@ -37,7 +37,8 @@ export class FormEncargadoComponent implements OnInit {
       
       this.encargados = resp;
 
-      this.router.navigate(['/mispedidos'])
+      this.router.navigateByUrl('/mispedidos');
+
 
     
       },error=>{

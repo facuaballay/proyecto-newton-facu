@@ -20,14 +20,14 @@ export class CrearPedidosComponent implements OnInit {
 
   ngOnInit() {
 
-    if(localStorage.getItem('encargado')){
+    if(sessionStorage.getItem('encargado')){
 
-      var id = localStorage.getItem('encargado');
+      var id = sessionStorage.getItem('encargado');
       this.todolisto = JSON.parse(id);
     }
-    if(localStorage.getItem('empresa')){
+    if(sessionStorage.getItem('empresa')){
 
-      var id = localStorage.getItem('empresa');
+      var id =sessionStorage.getItem('empresa');
       this.todolisto = JSON.parse(id);
     }
     
@@ -61,6 +61,9 @@ crearPedido(){
         
       })
 
+}
+onOpen(event: any) {
+  console.log(event);
 }
 
 }

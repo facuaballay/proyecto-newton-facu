@@ -13,6 +13,7 @@ import { MisPedidosComponent } from './usuario/mis-pedidos/mis-pedidos.component
 import { HomeComponent } from './home/home.component';
 import { RutasGuard } from '../../services/guards/rutas.guard';
 import { RoleEmpresaGuard } from '../../services/guards/roleEmpresa.guard';
+import { RoleEncargadoGuard } from '../../services/guards/role-encargado.guard';
 
 
 const routes: Routes = [
@@ -25,7 +26,7 @@ const routes: Routes = [
       { path: "crearencargado", component:CrearEncargadoComponent,canActivate:[RoleEmpresaGuard],data:{titulo:'Nuevo Encargado'} },
       { path: "listaencargados", component: ListaEncargadosComponent,canActivate:[RoleEmpresaGuard],data:{titulo:'Lista Encargados'} },
       { path: "crearpedido", component: CrearPedidosComponent,data:{titulo:'Crear Pedido'} },
-      { path: "historialpedidos", component: HistorialPedidosComponent,data:{titulo:'Historial Pedidos'} },
+      { path: "historialpedidos", component: HistorialPedidosComponent,canActivate:[RoleEncargadoGuard],data:{titulo:'Historial Pedidos'} },
       { path: "mispedidos", component:MisPedidosComponent,data:{titulo:'Mis Pedidos'} },
       { path: "", redirectTo: "/mispedidos", pathMatch: "full" },
     ],

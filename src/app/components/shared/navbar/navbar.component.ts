@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ImagenService } from '../../../services/shared/imagen.service';
-import { ChildService } from '../../../services/guards/child.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -11,32 +10,60 @@ import { ChildService } from '../../../services/guards/child.service';
 export class NavbarComponent implements OnInit {
 
     public infoLista;
+    public images;
+     public imglista;
 
-  constructor(public router:Router, public _imagen: ImagenService ,public s:ChildService) { }
+  constructor(public router:Router) { }
 
   ngOnInit() {
     
     
-    if(localStorage.getItem('empresa')){
+    if(sessionStorage.getItem('empresa')){
 
-      let info = localStorage.getItem('empresa');
+      let info = sessionStorage.getItem('empresa');
   
       this.infoLista =JSON.parse(info);
+      
+      if(this.infoLista.img === null){
+        
+        this.images = 'assets/images/users/default.png';
+       }else{
+        this.images = `http://localhost/backend/public/api/imagen/${this.infoLista.img}`;
+       }
+      
     }
-    if(localStorage.getItem('encargado')){
+    if(sessionStorage.getItem('encargado')  ){
 
-      let info = localStorage.getItem('encargado');
+      let info = sessionStorage.getItem('encargado');
   
       this.infoLista =JSON.parse(info);
+
+      if(this.infoLista.img === null){
+        
+        this.images = 'assets/images/users/default.png';
+       }else{
+        this.images = `http://localhost/backend/public/api/imagen/${this.infoLista.img}`;
+       }
+      
     }
-    if(localStorage.getItem('usuario')){
+    if(sessionStorage.getItem('usuario')){
 
-      let info = localStorage.getItem('usuario');
+      let info = sessionStorage.getItem('usuario');
   
       this.infoLista =JSON.parse(info);
-      // this.infoLista.img = this.infoLista.img != null ? this._imagen.getImagen(this.infoLista.img) : null;
-      console.log(this.infoLista.img);
+      
+      if(this.infoLista.img === null){
+        
+        this.images = 'assets/images/users/default.png';
+       }else{
+        this.images = `http://localhost/backend/public/api/imagen/${this.infoLista.img}`;
+       }
+      
+      
 
+        
+
+       
       
     }
 
@@ -45,10 +72,13 @@ export class NavbarComponent implements OnInit {
     // console.log(this.infoLista);
   }
 
+  
   logout(){
-    localStorage.clear();
 
-    this.router.navigate(['/login']);
+
+    localStorage.clear();
+    sessionStorage.clear();
+    
     
   }
   

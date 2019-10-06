@@ -44,7 +44,7 @@ export class UsuarioService {
 
                       localStorage.setItem('token',resp.token);
 
-                      localStorage.setItem('usuario',JSON.stringify(resp.respuesta));
+                      sessionStorage.setItem('usuario',JSON.stringify(resp.respuesta));
       
                       
                 }));              
@@ -53,7 +53,7 @@ export class UsuarioService {
           pedidosUsuarios(){
             
 
-            let id = JSON.parse( localStorage.getItem('usuario'));
+            let id = JSON.parse( sessionStorage.getItem('usuario'));
 
             let url = URL_SERVICE + `/usuario/${id.id}`;
 

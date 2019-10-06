@@ -36,13 +36,13 @@
                
                
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle waves-effect waves-dark"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img [src]="infoLista.img | noimageUser" alt="user" class="profile-pic" /></a>
+                    <a class="nav-link dropdown-toggle waves-effect waves-dark"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img [src]="images " alt="user" class="profile-pic" /></a>
                     <div class="dropdown-menu dropdown-menu-right animated flipInY">
                         <ul class="dropdown-user">
                             <li>
                                 
                                 <div class="dw-user-box">
-                                    <div class="u-img"><img [src]="infoLista.img | noimageUser" alt="user"></div>
+                                    <div class="u-img"><img [src]="images " alt="user"></div>
                                     <div class="u-text">
                                         <h4 class="text-secondary" *ngIf="infoLista.role === 'empresa'">{{infoLista.nombreEmpresa}}</h4>
                                         <h4 class="text-secondary" >{{infoLista.usuario}}</h4>
@@ -52,7 +52,7 @@
                             <li role="separator" class="divider"></li>
                             <li><a ><i class="ti-user"></i> Editar Perfil</a></li>
                             <li role="separator" class="divider"></li>
-                            <li><a (click)="logout()"><i class="fa fa-power-off"></i> Cerrar Sesion</a></li>
+                            <li><a href="/login" (click)="logout()"><i class="fa fa-power-off"></i> Cerrar Sesion</a></li>
                         </ul>
                     </div>
                 </li>
@@ -60,3 +60,4 @@
         </div>
     </nav>
 </header>
+

@@ -33,8 +33,7 @@ export class FormEmpresaComponent implements OnInit {
                             swal('Sesion Exitosa','','success');
                             
                             this.empresas = resp;
-                            this.router.navigate(['/mispedidos']);
-                            
+                            this.router.navigateByUrl('/mispedidos');
                           },(error:any)=>{
                            console.log(error);
 

@@ -9,14 +9,12 @@ import { EncargadoService } from '../encargado/encargado.service';
 export class ChildService {
 
     token: string;
-    encargado;
-    encargadolisto;
+    
     empresa;
     empresaLista;
 
   constructor(
-            public _EmpresaService:EmpresaService,
-            public _EncargadoService:EncargadoService    ) {
+               ) {
 
                     this.cargarStorage();
 }  
@@ -26,17 +24,17 @@ ngOnInit() {
 
 cargarStorage() {
 
-    if ( localStorage.getItem('empresa')) {
+    if ( sessionStorage.getItem('empresa')) {
       
-      this.empresa = JSON.parse( localStorage.getItem('empresa') );
-       this.empresaLista= this.empresa.role
+      this.empresa = JSON.parse( sessionStorage.getItem('empresa') );
+       this.empresaLista= this.empresa.role;
     }
-    if ( localStorage.getItem('encargado')) {
+    if ( sessionStorage.getItem('encargado')) {
       
-        this.encargado = JSON.parse( localStorage.getItem('encargado') );
-        this.encargadolisto= this.encargado.role
-
-      }
+      this.empresa = JSON.parse( sessionStorage.getItem('encargado') );
+       this.empresaLista= this.empresa.role;
+    }
+    
 
   }
 

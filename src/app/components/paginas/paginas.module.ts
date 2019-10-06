@@ -16,8 +16,8 @@ import { DigitOnlyModule } from '@uiowa/digit-only';
 import { SharedModule } from '../shared/shared.module';
 import { NavegacionComponent } from './navegacion/navegacion.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-//pipes
-import { NoimagePipe } from 'src/app/pipes/noimage.pipe';
+import { NoimagePipe } from '../../pipes/noimage.pipe';
+
 
 
 @NgModule({
@@ -40,7 +40,8 @@ import { NoimagePipe } from 'src/app/pipes/noimage.pipe';
         SharedModule,
         FormsModule,
         ReactiveFormsModule,
-        DigitOnlyModule
+        DigitOnlyModule,
+        
        
         
          ],

@@ -30,7 +30,7 @@ export class FormLoginComponent implements OnInit {
     .subscribe((resp:any) =>{
       swal('Sesion Exitosa','','success')
       
-      this.router.navigate(['/mispedidos'])
+      this.router.navigateByUrl('/mispedidos');
       
     },(error:any)=>{
       

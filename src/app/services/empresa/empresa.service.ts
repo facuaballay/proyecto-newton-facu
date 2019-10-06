@@ -46,14 +46,14 @@ export class EmpresaService {
 
                       localStorage.setItem('token',resp.token);
 
-                      localStorage.setItem('empresa',JSON.stringify(resp.respuesta));
+                      sessionStorage.setItem('empresa',JSON.stringify(resp.respuesta));
       
                       
                 }));              
           };
   
   listaEncargados(){
-    let id = JSON.parse( localStorage.getItem('empresa'));
+    let id = JSON.parse( sessionStorage.getItem('empresa'));
             
     let url = URL_SERVICE + `/empresa/encargados/${id.id}`;
 
@@ -70,7 +70,7 @@ export class EmpresaService {
   
   historialPedidosEncargados(){
     
-    let id = JSON.parse( localStorage.getItem('empresa'));
+    let id = JSON.parse( sessionStorage.getItem('empresa'));
             
     let url = URL_SERVICE + `/empresa/historial/${id.id}`;
 
@@ -88,7 +88,7 @@ export class EmpresaService {
   pedidosEmpresa(){
       
 
-    let id = JSON.parse( localStorage.getItem('empresa'));
+    let id = JSON.parse( sessionStorage.getItem('empresa'));
 
     let url = URL_SERVICE + `/empresa/${id.id}`;
 

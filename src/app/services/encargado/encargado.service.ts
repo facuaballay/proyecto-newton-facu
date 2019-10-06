@@ -53,13 +53,13 @@ export class EncargadoService {
 
        localStorage.setItem('token',resp.token);
 
-       localStorage.setItem('encargado',JSON.stringify(resp.respuesta));
+       sessionStorage.setItem('encargado',JSON.stringify(resp.respuesta));
     }));   
   }
   pedidosEncargado(){
       
 
-    let id = JSON.parse( localStorage.getItem('encargado'));
+    let id = JSON.parse( sessionStorage.getItem('encargado'));
 
     let url = URL_SERVICE + `/encargado/${id.id}`;
 
